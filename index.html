@@ -158,6 +158,123 @@
           
           
             
+              <a class="post-title-link" href="/2015/09/24/welcome/" itemprop="url">
+                未命名
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於
+          <time itemprop="dateCreated" datetime="2015-09-24T16:58:30+08:00" content="2015-09-24">
+            2015-09-24
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>###Swift 初见</p>
+<ul>
+<li><p>通常来说，编程语言教程中的第一个程序应该在屏幕上打印“Hello, world”。在 Swift 中，可以用一行代码实现：</p>
+<pre><code><span class="function"><span class="title">println</span><span class="params">(<span class="string">"Hello, world"</span>)</span></span>
+</code></pre></li>
+<li><p>如果你写过<strong>C</strong>或者<strong>Objective-C</strong>代码，那你应该很熟悉这种形式——在<strong>Swift</strong>中，这行代码就是一个完整的程序。你不需要为了输入输出或者字符串处理导入一个单独的库。全局作用域中的代码会被自动当做程序的入口点，所以你也不需要<code>main</code>函数。你同样不需要在每个语句结尾写上分号。</p>
+</li>
+<li><p>这个教程会通过一系列编程例子来让你对<strong>Swift</strong>有初步了解，如果你有什么不理解的地方也不用担心——任何本章介绍的内容都会在后面的章节中详细讲解。</p>
+</li>
+</ul>
+<blockquote>
+<p>注意：为了获得最好的体验，在 Xcode 当中使用代码预览功能。代码预览功能可以让你编辑代码并实时看到运行结果。</p>
+</blockquote>
+<p>####简单值</p>
+<ul>
+<li><p>使用<code>let</code>来声明常量，使用<code>var</code>来声明变量。一个常量的值在编译时并不需要获取，但是你只能为它赋值一次。也就是说你可以用常量来表示这样一个值：你只需要决定一次，但是需要使用很多次。</p>
+<pre><code>var myVariable = <span class="number">42</span>
+myVariable = <span class="number">50</span>
+let myConstant = <span class="number">42</span>
+</code></pre></li>
+<li><p>常量或者变量的类型必须和你赋给它们的值一样。然而，声明时类型是可选的，声明的同时赋值的话，编译器会自动推断类型。在上面的例子中，编译器推断出<code>myVariable</code>是一个整数（integer）因为它的初始值是整数。</p>
+</li>
+<li><p>如果初始值没有提供足够的信息（或者没有初始值），那你需要在变量后面声明类型，用冒号分割。</p>
+<pre><code><span class="keyword">let</span> implicitInteger = <span class="number">70</span>
+<span class="keyword">let</span> implicitDouble = <span class="number">70.0</span>
+<span class="keyword">let</span> explicitDouble: <span class="built_in">Double</span> = <span class="number">70</span>
+</code></pre></li>
+<li><p>值永远不会被隐式转换为其他类型。如果你需要把一个值转换成其他类型，请显式转换。</p>
+<pre><code>let <span class="tag">label</span> = <span class="string">"The width is"</span>
+let <span class="attribute">width</span> = <span class="number">94</span>
+let widthLabel = <span class="tag">label</span> + <span class="function"><span class="title">String</span><span class="params">(width)</span></span>
+</code></pre></li>
+<li><p>有一种更简单的把值转换成字符串的方法：把值写到括号中，并且在括号之前写一个反斜杠。例如：</p>
+<pre><code><span class="keyword">let</span> apples = <span class="number">3</span>
+<span class="keyword">let</span> oranges = <span class="number">5</span>
+<span class="keyword">let</span> appleSummary = <span class="string">"I have <span class="subst">\(apples)</span> apples."</span>
+<span class="keyword">let</span> fruitSummary = <span class="string">"I have <span class="subst">\(apples + oranges)</span> pieces of fruit."</span>
+</code></pre></li>
+<li><p>使用方括号[ ]来创建数组和字典，并使用下标或者键（key）来访问元素。</p>
+<pre><code><span class="variable"><span class="keyword">var</span> shoppingList</span> = [<span class="string">"catfish"</span>, <span class="string">"water"</span>, <span class="string">"tulips"</span>, <span class="string">"blue paint"</span>]
+shoppingList[<span class="number">1</span>] = <span class="string">"bottle of water"</span>
+
+<span class="variable"><span class="keyword">var</span> occupations</span> = [
+          <span class="string">"Malcolm"</span>: <span class="string">"Captain"</span>,
+     <span class="string">"Kaylee"</span>: <span class="string">"Mechanic"</span>,
+]
+occupations[<span class="string">"Jayne"</span>] = <span class="string">"Public Relations"</span>
+</code></pre></li>
+<li><p>要创建一个空数组或者字典，使用初始化语法。</p>
+<pre><code><span class="keyword">let</span> emptyArray = <span class="type">String</span><span class="literal">[]</span><span class="literal">()</span>
+<span class="keyword">let</span> emptyDictionary = <span class="type">Dictionary</span>&lt;<span class="type">String</span>, <span class="type">Float</span>&gt;<span class="literal">()</span>
+</code></pre></li>
+<li><p>如果类型信息可以被推断出来，你可以用<code>[ ]</code>和<code>[:]</code>来创建空数组和空字典——就像你声明变量或者给函数传参数的时候一样。</p>
+<pre><code>shoppingList = []   <span class="comment">// 去逛街并买点东西</span>
+</code></pre></li>
+</ul>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/16/hello-world/" itemprop="url">
                 Hello World
               </a>
@@ -251,7 +368,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
