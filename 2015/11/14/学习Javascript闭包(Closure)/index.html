@@ -39,25 +39,25 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="title:学习Javascript闭包(Closure)
-闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。下面就是我的学习笔记，对于Javascript初学者应该是很有用的。
+<meta name="description" content="闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。下面就是我的学习笔记，对于Javascript初学者应该是很有用的。
 
-变量的作用域要理解闭包，首先必须理解Javascript特殊的变量作用域。变量的作用域无非就是两种：全局变量和局部变量。Javascript语言的特殊之处，就在于函">
+变量的作用域要理解闭包，首先必须理解Javascript特殊的变量作用域。变量的作用域无非就是两种：全局变量和局部变量。Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。
+12345var n=999;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="旅行者之家">
+<meta property="og:title" content="学习Javascript闭包(Closure)">
 <meta property="og:url" content="http://github.com/2015/11/14/学习Javascript闭包(Closure)/index.html">
 <meta property="og:site_name" content="旅行者之家">
-<meta property="og:description" content="title:学习Javascript闭包(Closure)
-闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。下面就是我的学习笔记，对于Javascript初学者应该是很有用的。
+<meta property="og:description" content="闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。下面就是我的学习笔记，对于Javascript初学者应该是很有用的。
 
-变量的作用域要理解闭包，首先必须理解Javascript特殊的变量作用域。变量的作用域无非就是两种：全局变量和局部变量。Javascript语言的特殊之处，就在于函">
-<meta property="og:updated_time" content="2015-11-14T01:56:47.000Z">
+变量的作用域要理解闭包，首先必须理解Javascript特殊的变量作用域。变量的作用域无非就是两种：全局变量和局部变量。Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。
+12345var n=999;">
+<meta property="og:updated_time" content="2015-11-14T02:25:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="旅行者之家">
-<meta name="twitter:description" content="title:学习Javascript闭包(Closure)
-闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。下面就是我的学习笔记，对于Javascript初学者应该是很有用的。
+<meta name="twitter:title" content="学习Javascript闭包(Closure)">
+<meta name="twitter:description" content="闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。下面就是我的学习笔记，对于Javascript初学者应该是很有用的。
 
-变量的作用域要理解闭包，首先必须理解Javascript特殊的变量作用域。变量的作用域无非就是两种：全局变量和局部变量。Javascript语言的特殊之处，就在于函">
+变量的作用域要理解闭包，首先必须理解Javascript特殊的变量作用域。变量的作用域无非就是两种：全局变量和局部变量。Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。
+12345var n=999;">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -67,7 +67,7 @@
   };
 </script>
 
-  <title>  | 旅行者之家 </title>
+  <title> 学习Javascript闭包(Closure) | 旅行者之家 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-hk">
@@ -166,7 +166,7 @@
           
           
             
-              
+              学习Javascript闭包(Closure)
             
           
         </h1>
@@ -175,7 +175,7 @@
       <div class="post-meta">
         <span class="post-time">
           發表於
-          <time itemprop="dateCreated" datetime="2015-11-14T09:56:47+08:00" content="2015-11-14">
+          <time itemprop="dateCreated" datetime="2015-11-14T10:25:16+08:00" content="2015-11-14">
             2015-11-14
           </time>
         </span>
@@ -194,7 +194,7 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="title:学习Javascript闭包(Closure)">title:学习Javascript闭包(Closure)</h2><blockquote>
+        <span itemprop="articleBody"><blockquote>
 <p>闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。<br>下面就是我的学习笔记，对于Javascript初学者应该是很有用的。</p>
 </blockquote>
 <h4 id="变量的作用域">变量的作用域</h4><p>要理解闭包，首先必须理解Javascript特殊的变量作用域。<br>变量的作用域无非就是两种：全局变量和局部变量。<br>Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。</p>
@@ -335,7 +335,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#title:学习Javascript闭包(Closure)"><span class="nav-number">1.</span> <span class="nav-text">title:学习Javascript闭包(Closure)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的作用域"><span class="nav-number">1.0.1.</span> <span class="nav-text">变量的作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何从外部读取局部变量？"><span class="nav-number">1.0.2.</span> <span class="nav-text">如何从外部读取局部变量？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包的概念"><span class="nav-number">1.0.3.</span> <span class="nav-text">闭包的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包的用途"><span class="nav-number">1.0.4.</span> <span class="nav-text">闭包的用途</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用闭包的注意点"><span class="nav-number">1.0.5.</span> <span class="nav-text">使用闭包的注意点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思考题"><span class="nav-number">1.0.6.</span> <span class="nav-text">思考题</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的作用域"><span class="nav-number">1.</span> <span class="nav-text">变量的作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何从外部读取局部变量？"><span class="nav-number">2.</span> <span class="nav-text">如何从外部读取局部变量？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包的概念"><span class="nav-number">3.</span> <span class="nav-text">闭包的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包的用途"><span class="nav-number">4.</span> <span class="nav-text">闭包的用途</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用闭包的注意点"><span class="nav-number">5.</span> <span class="nav-text">使用闭包的注意点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思考题"><span class="nav-number">6.</span> <span class="nav-text">思考题</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
