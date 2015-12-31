@@ -39,19 +39,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="基础选择器$(&amp;quot;#my_id&amp;quot;)其中#my_id表示根据id选择器获取页面中指定的标签元素，且返回唯一一个元素。
-12345678910&amp;lt;div id=&quot;divtest&quot;&amp;gt;div的内容&amp;lt;/div&amp;gt;&amp;lt;div id=&quot;default&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;$(&quot;#def">
+<meta name="description" content="JQuery基础选择器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JQuery基础选择器">
 <meta property="og:url" content="http://github.com/2015/12/31/JQuery基础选择器/index.html">
 <meta property="og:site_name" content="旅行者之家">
-<meta property="og:description" content="基础选择器$(&amp;quot;#my_id&amp;quot;)其中#my_id表示根据id选择器获取页面中指定的标签元素，且返回唯一一个元素。
-12345678910&amp;lt;div id=&quot;divtest&quot;&amp;gt;div的内容&amp;lt;/div&amp;gt;&amp;lt;div id=&quot;default&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;$(&quot;#def">
-<meta property="og:updated_time" content="2015-12-31T06:46:09.000Z">
+<meta property="og:description" content="JQuery基础选择器">
+<meta property="og:updated_time" content="2015-12-31T06:48:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JQuery基础选择器">
-<meta name="twitter:description" content="基础选择器$(&amp;quot;#my_id&amp;quot;)其中#my_id表示根据id选择器获取页面中指定的标签元素，且返回唯一一个元素。
-12345678910&amp;lt;div id=&quot;divtest&quot;&amp;gt;div的内容&amp;lt;/div&amp;gt;&amp;lt;div id=&quot;default&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;$(&quot;#def">
+<meta name="twitter:description" content="JQuery基础选择器">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -169,7 +166,7 @@
       <div class="post-meta">
         <span class="post-time">
           發表於
-          <time itemprop="dateCreated" datetime="2015-12-31T14:46:09+08:00" content="2015-12-31">
+          <time itemprop="dateCreated" datetime="2015-12-31T14:48:01+08:00" content="2015-12-31">
             2015-12-31
           </time>
         </span>
@@ -188,7 +185,8 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="基础选择器$(&quot;#my_id&quot;)">基础选择器<code>$(&quot;#my_id&quot;)</code></h3><p>其中<code>#my_id</code>表示根据id选择器获取页面中指定的标签元素，且返回唯一一个元素。</p>
+        <span itemprop="articleBody"><p>JQuery基础选择器<br><a id="more"></a></p>
+<h3 id="基础选择器$(&quot;#my_id&quot;)">基础选择器<code>$(&quot;#my_id&quot;)</code></h3><p>其中<code>#my_id</code>表示根据id选择器获取页面中指定的标签元素，且返回唯一一个元素。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"divtest"</span>&gt;</span>div的内容<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"default"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line"></span><br><span class="line">$(<span class="string">"#default"</span>).html($(<span class="string">"#divtest"</span>).html());</span><br><span class="line"></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="element_选择器$(“element”)">element 选择器<code>$(“element”)</code></h3><p>其中<code>element</code>就是元素的名称</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">"btntest"</span>&gt;</span>点我<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line"></span><br><span class="line">$(<span class="string">"button"</span>).attr(<span class="string">"disabled"</span>,<span class="string">"true"</span>);</span><br><span class="line"></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
