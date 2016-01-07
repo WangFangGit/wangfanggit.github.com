@@ -158,6 +158,73 @@
           
           
             
+              <a class="post-title-link" href="/2016/01/07/关于f1工具类的摸索/" itemprop="url">
+                关于浮动表汇总使用工具类的问题
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於
+          <time itemprop="dateCreated" datetime="2016-01-07T15:21:40+08:00" content="2016-01-07">
+            2016-01-07
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>在开发汇总浮动表功能时发现了一些问题，同时也走了一些弯路，再此记录，供大家参考。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/07/关于f1工具类的摸索/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2016/01/07/React学习笔记/" itemprop="url">
                 React学习笔记
               </a>
@@ -196,101 +263,6 @@
               閱讀全文 &raquo;
             </a>
           </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2016/01/07/关于f1工具类的摸索/" itemprop="url">
-                关于浮动表汇总使用工具类的问题
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於
-          <time itemprop="dateCreated" datetime="2016-01-07T14:25:44+08:00" content="2016-01-07">
-            2016-01-07
-          </time>
-        </span>
-
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><blockquote>
-<p>在开发汇总浮动表功能时发现了一些问题，同时也走了一些弯路，再此记录，供大家参考。</p>
-</blockquote>
-<h3 id="关于F1工具类的摸索">关于F1工具类的摸索</h3><p>以下是我使用过的三个工具类：</p>
-<ul>
-<li>com.f1j.ss.BookModelImpl</li>
-<li>com.f1j.swing.engine.ss.JBook</li>
-<li>com.f1j.swing.JBook</li>
-</ul>
-<p>首先要看一下这三个工具类之间的关系：</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">java.lang.Object</span><br><span class="line">  <span class="string">|</span></span><br><span class="line">  +--java.awt.Component</span><br><span class="line">        <span class="string">|</span></span><br><span class="line">        +--java.awt.Container</span><br><span class="line">              <span class="string">|</span></span><br><span class="line">              +--javax.swing.JComponent</span><br><span class="line">                    <span class="string">|</span></span><br><span class="line">                    +--javax.swing.JPanel</span><br><span class="line">                          <span class="string">|</span></span><br><span class="line">                          +--com.f1j.swing.common.Panel</span><br><span class="line">                                <span class="string">|</span></span><br><span class="line">                                +--com.f1j.swing.engine.ss.JBook</span><br><span class="line">                                      <span class="string">|</span></span><br><span class="line">                                      +--com.f1j.swing.JBook</span><br></pre></td></tr></table></figure>
-<p>从上面的结构可以看出，<strong>com.f1j.swing.JBook</strong>是<strong>com.f1j.swing.engine.ss.JBook</strong>的子类，他们是父子关系。那么再看一下<strong>com.f1j.ss.BookModelImpl</strong>。</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.Object  <span class="string">|</span>  +--com.actuate.util.Debug        <span class="string">|</span>        +--com.f1j.util.Debug              <span class="string">|</span>              +--com.f1j.util.ObjConst                    <span class="string">|</span>                    +--com.f1j.util.Obj                          <span class="string">|</span>                          +--com.f1j.ss.BookModelImpl</span><br></pre></td></tr></table></figure>
-<p>直观上可以看出<strong>BookModelImpl</strong>与<strong>JBook</strong>的来源不同。<br>但是从网上的一些资料中得知，<strong>com.f1j.swing.engine.ss.JBook</strong>和<strong>com.f1j.ss.BookModelImpl</strong>提供了相同的功能, 只是<strong>com.f1j.ss.BookModelImpl</strong>不包括GUI。<br>注：<a href="http://kalashnicov.iteye.com/blog/461708" target="_blank" rel="external">参考链接</a></p>
-<h3 id="本次开发中遇到的问题">本次开发中遇到的问题</h3><blockquote>
-<p>本次开发，主要是针对浮动表的数据汇总，在节点汇总等功能中加入浮动表的汇总。</p>
-</blockquote>
-<h5 id="错误的改变_-_用JBook替换了BookModelImpl">错误的改变 - 用<code>JBook</code>替换了<code>BookModelImpl</code></h5><ul>
-<li><p>在最初的浮动表汇总设计方案是这样设计的，初始状态的浮动表会有两行，当数据超过两行时需要增加浮动行，最后增加N-2行，便于填充数据。但是在实际开发中却发现，当使用<strong>BookModelImpl</strong>的<strong>insertRange</strong>方法做插入行的动作时，始终会抛出异常。也就是由于这个原因，用<strong>com.f1j.swing.engine.ss.JBook</strong>代替了<strong>com.f1j.ss.BookModelImpl</strong>。</p>
-</li>
-<li><p>开发结束后，在本地测试环境和运维的测试环境，均通过测试，没有发现问题。<strong>但是</strong>，当程序发布到生产环境后，在某些库点上使用汇总功能时抛出异常，提示<code>无法找到类</code>，也就是找不到<strong>com.f1j.swing.engine.ss.JBook</strong>，那么既然父类都找不到，作为子类的<strong>com.f1j.swing.JBook</strong>更是查找不到了。</p>
-</li>
-</ul>
-<h5 id="重回正轨_-_重新使用BookModelImpl">重回正轨 - 重新使用<code>BookModelImpl</code></h5><ul>
-<li><p>没有办法，只好在<code>BookModelImpl</code>中重新找解决办法。改回BookModelImpl后，在插入行的代码中依然报错。然后考虑先删除插行操作，看看显示效果，再想应对办法。</p>
-</li>
-<li><p>删除掉插行操作的代码后，执行汇总，发现数据汇总正常，但当时只有两行数据，为了测试多余两行数据的情况，又增加了几张本表，添加了二十几行数据，发现数据汇总依然正常。</p>
-</li>
-<li><p>经过检查分析发现扩展出来的行，公式也是正确的，数据汇总也没有错误。</p>
-</li>
-</ul>
-<blockquote>
-<p>经过以上的过程，最终发现现有的环境还是需要使用<code>com.f1j.ss.BookModelImpl</code>而不能使用其他的诸如<code>com.f1j.swing.engine.ss.JBook</code>的工具类。<br>而且，在汇总浮动表时，无需做插入行的操作。如果大家之前就发现了这些问题，那也是极好的。。。</p>
-</blockquote>
-</span>
         
       
     </div>
