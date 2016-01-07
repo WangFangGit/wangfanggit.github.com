@@ -39,16 +39,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="学习了一段时间的Swift，因为某些事情而中断了。。。">
+<meta name="description" content="在React的开发过程中，需要编译的操作，有的人使用babel来编译，有点人使用webpack，我使用的是后者，所以在这里就不做关于bable的介绍了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="欢迎使用 Swift">
-<meta property="og:url" content="http://github.com/2015/12/31/welcome/index.html">
+<meta property="og:title" content="React学习笔记">
+<meta property="og:url" content="http://github.com/2016/01/07/React学习笔记/index.html">
 <meta property="og:site_name" content="旅行者之家">
-<meta property="og:description" content="学习了一段时间的Swift，因为某些事情而中断了。。。">
-<meta property="og:updated_time" content="2015-12-31T06:03:32.000Z">
+<meta property="og:description" content="在React的开发过程中，需要编译的操作，有的人使用babel来编译，有点人使用webpack，我使用的是后者，所以在这里就不做关于bable的介绍了。">
+<meta property="og:updated_time" content="2016-01-07T07:20:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="欢迎使用 Swift">
-<meta name="twitter:description" content="学习了一段时间的Swift，因为某些事情而中断了。。。">
+<meta name="twitter:title" content="React学习笔记">
+<meta name="twitter:description" content="在React的开发过程中，需要编译的操作，有的人使用babel来编译，有点人使用webpack，我使用的是后者，所以在这里就不做关于bable的介绍了。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -58,7 +58,7 @@
   };
 </script>
 
-  <title> 欢迎使用 Swift | 旅行者之家 </title>
+  <title> React学习笔记 | 旅行者之家 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-hk">
@@ -157,7 +157,7 @@
           
           
             
-              欢迎使用 Swift
+              React学习笔记
             
           
         </h1>
@@ -166,8 +166,8 @@
       <div class="post-meta">
         <span class="post-time">
           發表於
-          <time itemprop="dateCreated" datetime="2015-12-31T14:03:32+08:00" content="2015-12-31">
-            2015-12-31
+          <time itemprop="dateCreated" datetime="2016-01-07T15:20:17+08:00" content="2016-01-07">
+            2016-01-07
           </time>
         </span>
 
@@ -186,164 +186,34 @@
 
       
         <span itemprop="articleBody"><blockquote>
-<p>学习了一段时间的Swift，因为某些事情而中断了。。。<br><a id="more"></a></p>
+<p>在React的开发过程中，需要编译的操作，有的人使用babel来编译，有点人使用webpack，我使用的是后者，所以在这里就不做关于bable的介绍了。<br><a id="more"></a></p>
 </blockquote>
-<h3 id="Swift_初见">Swift 初见</h3><ul>
-<li><p>通常来说，编程语言教程中的第一个程序应该在屏幕上打印“Hello, world”。在 Swift 中，可以用一行代码实现：</p>
-<pre><code><span class="function"><span class="title">println</span><span class="params">(<span class="string">"Hello, world"</span>)</span></span>
-</code></pre></li>
-<li><p>如果你写过<strong>C</strong>或者<strong>Objective-C</strong>代码，那你应该很熟悉这种形式——在<strong>Swift</strong>中，这行代码就是一个完整的程序。你不需要为了输入输出或者字符串处理导入一个单独的库。全局作用域中的代码会被自动当做程序的入口点，所以你也不需要<code>main</code>函数。你同样不需要在每个语句结尾写上分号。</p>
+<h4 id="安装webpack">安装webpack</h4><ul>
+<li><p>安装webpack的前提条件是已经安装了Node.js和npm，如果没有安装，需要先安装好，因为webpack是直接通过npm安装的。</p>
 </li>
-<li><p>这个教程会通过一系列编程例子来让你对<strong>Swift</strong>有初步了解，如果你有什么不理解的地方也不用担心——任何本章介绍的内容都会在后面的章节中详细讲解。</p>
+<li><p>如果已经安装了Node.js和npm，可以通过下面的命令安装webpack：</p>
 </li>
 </ul>
-<blockquote>
-<p>注意：为了获得最好的体验，在 Xcode 当中使用代码预览功能。代码预览功能可以让你编辑代码并实时看到运行结果。</p>
-</blockquote>
-<h4 id="简单值">简单值</h4><ul>
-<li><p>使用<code>let</code>来声明常量，使用<code>var</code>来声明变量。一个常量的值在编译时并不需要获取，但是你只能为它赋值一次。也就是说你可以用常量来表示这样一个值：你只需要决定一次，但是需要使用很多次。</p>
-<pre><code>var myVariable = <span class="number">42</span>
-myVariable = <span class="number">50</span>
-let myConstant = <span class="number">42</span>
-</code></pre></li>
-<li><p>常量或者变量的类型必须和你赋给它们的值一样。然而，声明时类型是可选的，声明的同时赋值的话，编译器会自动推断类型。在上面的例子中，编译器推断出<code>myVariable</code>是一个整数（integer）因为它的初始值是整数。</p>
-</li>
-<li><p>如果初始值没有提供足够的信息（或者没有初始值），那你需要在变量后面声明类型，用冒号分割。</p>
-<pre><code><span class="keyword">let</span> implicitInteger = <span class="number">70</span>
-<span class="keyword">let</span> implicitDouble = <span class="number">70.0</span>
-<span class="keyword">let</span> explicitDouble: <span class="built_in">Double</span> = <span class="number">70</span>
-</code></pre></li>
-<li><p>值永远不会被隐式转换为其他类型。如果你需要把一个值转换成其他类型，请显式转换。</p>
-<pre><code>let <span class="tag">label</span> = <span class="string">"The width is"</span>
-let <span class="attribute">width</span> = <span class="number">94</span>
-let widthLabel = <span class="tag">label</span> + <span class="function"><span class="title">String</span><span class="params">(width)</span></span>
-</code></pre></li>
-<li><p>有一种更简单的把值转换成字符串的方法：把值写到括号中，并且在括号之前写一个反斜杠。例如：</p>
-<pre><code><span class="keyword">let</span> apples = <span class="number">3</span>
-<span class="keyword">let</span> oranges = <span class="number">5</span>
-<span class="keyword">let</span> appleSummary = <span class="string">"I have <span class="subst">\(apples)</span> apples."</span>
-<span class="keyword">let</span> fruitSummary = <span class="string">"I have <span class="subst">\(apples + oranges)</span> pieces of fruit."</span>
-</code></pre></li>
-<li><p>使用方括号[ ]来创建数组和字典，并使用下标或者键（key）来访问元素。</p>
-<pre><code><span class="variable"><span class="keyword">var</span> shoppingList</span> = [<span class="string">"catfish"</span>, <span class="string">"water"</span>, <span class="string">"tulips"</span>, <span class="string">"blue paint"</span>]
-shoppingList[<span class="number">1</span>] = <span class="string">"bottle of water"</span>
-
-<span class="variable"><span class="keyword">var</span> occupations</span> = [
-          <span class="string">"Malcolm"</span>: <span class="string">"Captain"</span>,
-     <span class="string">"Kaylee"</span>: <span class="string">"Mechanic"</span>,
-]
-occupations[<span class="string">"Jayne"</span>] = <span class="string">"Public Relations"</span>
-</code></pre></li>
-<li><p>要创建一个空数组或者字典，使用初始化语法。</p>
-<pre><code><span class="keyword">let</span> emptyArray = <span class="type">String</span><span class="literal">[]</span><span class="literal">()</span>
-<span class="keyword">let</span> emptyDictionary = <span class="type">Dictionary</span>&lt;<span class="type">String</span>, <span class="type">Float</span>&gt;<span class="literal">()</span>
-</code></pre></li>
-<li><p>如果类型信息可以被推断出来，你可以用<code>[ ]</code>和<code>[:]</code>来创建空数组和空字典——就像你声明变量或者给函数传参数的时候一样。</p>
-<pre><code>shoppingList = []   <span class="comment">// 去逛街并买点东西</span>
-</code></pre></li>
-</ul>
-<h4 id="控制流">控制流</h4><ul>
-<li><p>使用<code>if</code>和<code>switch</code>来进行条件操作，使用<code>for-in</code>、<code>for</code>、<code>while</code>和<code>do-while</code>来进行循环。包裹条件和循环变量括号可以省略，但是语句体的大括号是必须的。</p>
-<pre><code>let individualScores = [<span class="number">75</span>, <span class="number">43</span>, <span class="number">103</span>, <span class="number">87</span>, <span class="number">12</span>]
-var teamScore = <span class="number">0</span>
-<span class="keyword">for</span> score in individualScores {
-    <span class="keyword">if</span> score &gt; <span class="number">50</span> {
-    teamScore += <span class="number">3</span>
-  } <span class="keyword">else</span> {
-    teamScore += <span class="number">1</span>
-     }
-}
-teamScore
-</code></pre></li>
-</ul>
-<blockquote>
-<p>在<code>if</code>语句中，条件必须是一个布尔表达式——这意味着像<code>if score { ... }</code>这样的代码将报错，而不会隐形地与 0 做对比。</p>
-</blockquote>
+<p><code>$ npm install -g webpack</code></p>
+<p>这里的-g是安装全局模块，安装好后，可以在任意位置通过<code>webpack</code>命令调用。</p>
+<p>执行<code>webpack</code>命令后，会默认去查找当前执行目录下的<code>webpack.config.js</code> 配置文件，这个文件是需要手动建立的。以下是我建立的一个配置文件，可做参考：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="module"><span class="keyword">module</span>.exports = </span>&#123;</span><br><span class="line"> entry:&#123;</span><br><span class="line">   hello_world: <span class="string">'./js/hello_world.js'</span>,</span><br><span class="line"></span><br><span class="line">   hello_names: <span class="string">'./js/hello_names.js'</span>,</span><br><span class="line"></span><br><span class="line">   hello_component: <span class="string">'./js/hello_component.js'</span>,</span><br><span class="line"></span><br><span class="line">   hello_component_thorough: <span class="string">'./js/hello_component_thorough.js'</span></span><br><span class="line"></span><br><span class="line"> &#125;,</span><br><span class="line"></span><br><span class="line"> output: &#123;</span><br><span class="line">   path: __dirname + <span class="string">'/assets/'</span>,</span><br><span class="line">   publicPath: <span class="string">"/assets/"</span>,</span><br><span class="line">   filename: <span class="string">'[name].js'</span></span><br><span class="line"> &#125;,</span><br><span class="line"> <span class="module"><span class="keyword">module</span>:</span>&#123;</span><br><span class="line">    loaders:[&#123;</span><br><span class="line">       test: <span class="regexp">/\.jsx?$/</span>, </span><br><span class="line">       loaders: [<span class="string">'jsx?harmony'</span>]</span><br><span class="line">    &#125;]</span><br><span class="line"> &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>你可以一起使用<code>if</code>和<code>let</code>来处理值缺失的情况。有些变量的值是可选的。一个可选的值可能是一个具体的值或者是<code>nil</code>，表示值缺失。在类型后面加一个问号来标记这个变量的值是可选的。</p>
-<pre><code><span class="keyword">var</span> optionalString: <span class="built_in">String</span>? = <span class="string">"Hello"</span>
-optionalString == nil
-
-<span class="keyword">var</span> optionalName: <span class="built_in">String</span>? = <span class="string">"John Appleseed"</span>
-<span class="keyword">var</span> greeting = <span class="string">"Hello!"</span>
-<span class="keyword">if</span> <span class="keyword">let</span> name = optionalName {
-    greeting = <span class="string">"Hello, \(name)"</span>
-}
-</code></pre></li>
-<li><p>练习：把optionalName改成nil，greeting会是什么？添加一个else语句，当optionalName是nil时给greeting赋一个不同的值。</p>
-<blockquote>
-<p>如果变量的可选值是<strong>nil</strong>，条件会判断为<strong>false</strong>，大括号中的代码会被跳过。如果不是<strong>nil</strong>，会将值赋给<strong>let</strong>后面的常量，这样代码块中就可以使用这个值了。</p>
-</blockquote>
+<li>其中<code>entry</code>参数定义了打包后的入口文件，其中的所有文件会按顺序打包。每个文件进行依赖的递归查找，直到所有相关模块都被打包。<code>output</code>参数定义了输出文件的位置，其中常用的参数包括：</li>
+</ul>
+<p>path: 打包文件存放的绝对路径</p>
+<p>publicPath: 网站运行时的访问路径</p>
+<p>filename: 打包后的文件名</p>
+<h4 id="下载React">下载React</h4><ul>
+<li><p>如果安装了git的话，下载React就变得相对简单，关于git，这里不做过多的解释。因为我已经安装了git所以使用git下载，如果没有安装git，也可以通过React的官网下载。</p>
 </li>
-<li><p><code>switch</code>支持任意类型的数据以及各种比较操作——不仅仅是整数以及测试相等。</p>
-<pre><code><span class="keyword">let</span> vegetable = <span class="string">"red pepper"</span>
-<span class="keyword">switch</span> vegetable {
-    <span class="keyword">case</span> <span class="string">"celery"</span>:
-        <span class="keyword">let</span> vegetableComment = <span class="string">"Add some raisins and make ants on a log."</span>
-    <span class="keyword">case</span> <span class="string">"cucumber"</span>, <span class="string">"watercress"</span>:
-        <span class="keyword">let</span> vegetableComment = <span class="string">"That would make a good tea sandwich."</span>
-    <span class="keyword">case</span> <span class="keyword">let</span> x <span class="keyword">where</span> x.hasSuffix(<span class="string">"pepper"</span>):
-        <span class="keyword">let</span> vegetableComment = <span class="string">"Is it a spicy <span class="subst">\(x)</span>?"</span>
-    <span class="keyword">default</span>:
-        <span class="keyword">let</span> vegetableComment = <span class="string">"Everything tastes good in soup."</span>
-}
-</code></pre></li>
-<li><p>练习：删除default语句，看看会有什么错误？</p>
-<blockquote>
-<p>运行switch中匹配到的子句之后，程序会退出switch语句，并不会继续向下运行，所以不需要在每个子句结尾写break。</p>
-</blockquote>
-</li>
-<li><p>你可以使用<code>for-in</code>来遍历字典，需要两个变量来表示每个键值对。</p>
+<li><p>首先进入你要下载到的目录，执行：</p>
 </li>
 </ul>
-<pre><code>let interestingNumbers = [
-    <span class="string">"Prime"</span>: [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>],
-    <span class="string">"Fibonacci"</span>: [<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>],
-    <span class="string">"Square"</span>: [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>],
-]
-var largest = <span class="number">0</span>
-<span class="keyword">for</span> (kind, numbers) in interestingNumbers {
-    <span class="keyword">for</span> number in numbers {
-        <span class="keyword">if</span> number &gt; largest {
-            largest = number
-        }
-    }
-}
-largest
-</code></pre><ul>
-<li><p>练习：添加另一个变量来记录哪种类型的数字是最大的。</p>
-</li>
-<li><p>使用<code>while</code>来重复运行一段代码直到不满足条件。循环条件可以在开头也可以在结尾。</p>
-</li>
+<p><code>$ git clone git@github.com:ruanyf/react-demos.git</code></p>
+<ul>
+<li>在该目录下会出现react-demos文件夹，里面的build文件夹中是React需要的js，demo01-demo13是一些官方的demo。</li>
 </ul>
-<pre><code><span class="keyword">var</span> <span class="keyword">n</span> = 2
-<span class="keyword">while</span> <span class="keyword">n</span> &lt; 100 {
-    <span class="keyword">n</span> = <span class="keyword">n</span> * 2
-}
-<span class="keyword">n</span>
-
-<span class="keyword">var</span> <span class="keyword">m</span> = 2
-<span class="keyword">do</span> {
-    <span class="keyword">m</span> = <span class="keyword">m</span> * 2
-} <span class="keyword">while</span> <span class="keyword">m</span> &lt; 100
-<span class="literal">m</span>
-</code></pre><blockquote>
-<p>你可以在循环中使用<code>..</code>来表示范围，也可以使用传统的写法，两者是等价的：</p>
-</blockquote>
-<pre><code>var firstForLoop = <span class="number">0</span>
-<span class="keyword">for</span> i in <span class="number">0.</span><span class="number">.3</span> {
-    firstForLoop += i
-}
-firstForLoop
-
-var secondForLoop = <span class="number">0</span>
-<span class="keyword">for</span> var i = <span class="number">0</span>; i &lt; <span class="number">3</span>; ++i {
-    secondForLoop += <span class="number">1</span>
-}
-secondForLoop
-</code></pre><blockquote>
-<p>使用<code>..</code>创建的范围<strong><em>不包含上界</em></strong>，如果想包含的话需要使用<code>...</code>。</p>
-</blockquote>
 </span>
       
     </div>
@@ -355,11 +225,11 @@ secondForLoop
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/31/学习Javascript闭包(Closure)/" rel="prev">学习Javascript闭包(Closure)</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/07/关于f1工具类的摸索/" rel="next">关于浮动表汇总使用工具类的问题</a>
             
           </div>
         </div>
@@ -463,7 +333,7 @@ secondForLoop
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Swift_初见"><span class="nav-number">1.</span> <span class="nav-text">Swift 初见</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单值"><span class="nav-number">1.1.</span> <span class="nav-text">简单值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制流"><span class="nav-number">1.2.</span> <span class="nav-text">控制流</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装webpack"><span class="nav-number">1.</span> <span class="nav-text">安装webpack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载React"><span class="nav-number">2.</span> <span class="nav-text">下载React</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
